@@ -1,0 +1,918 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8ed;
+    color: #3e2723;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    background-color: #2b1d18;
+    padding: 20px 7%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    color: #f3d5a5;
+    font-size: 30px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #d9a86c;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 70px 8%;
+    background: linear-gradient(120deg, #3e2723, #6d4c41);
+    color: white;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.subtitle {
+    color: #e5bb83;
+    letter-spacing: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 65px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero-content > p:not(.subtitle) {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #f1e3d4;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #e3b77c;
+    color: #2b1d18;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #fff1dc;
+    transform: translateY(-4px);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 450px;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   MENU SECTION
+========================= */
+
+.menu {
+    width: 100%;
+    padding: 80px 7%;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 40px;
+    color: #3e2723;
+    margin-bottom: 15px;
+}
+
+.menu-text {
+    color: #8d6e63;
+    font-size: 16px;
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   COFFEE GRID
+========================= */
+
+.menu-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+
+/* =========================
+   COFFEE CARDS
+========================= */
+
+.card {
+    width: 100%;
+    min-width: 0;
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(62, 39, 35, 0.09);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(62, 39, 35, 0.16);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #3e2723;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #795548;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.card span {
+    color: #a66b3f;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+
+/* =========================
+   CAKES SECTION
+========================= */
+
+.cakes-category {
+    width: 100%;
+    max-width: 1150px;
+    margin: 60px auto 0;
+    padding: 0;
+}
+
+.cakes-category > h2 {
+    font-size: 30px;
+    color: #5a3823;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #d8bd99;
+}
+
+
+/* CAKE GRID */
+
+.cakes-category .menu-grid {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+
+/* CAKE CARDS - SAME SIZE AS COFFEE */
+
+.cakes-category .menu-card {
+    width: 100%;
+    min-width: 0;
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(62, 39, 35, 0.09);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cakes-category .menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(62, 39, 35, 0.16);
+}
+
+
+/* CAKE IMAGES - SAME AS COFFEE */
+
+.cakes-category .menu-card img {
+    width: 100%;
+    height: 230px;
+    min-height: 230px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+
+/* CAKE HEADING */
+
+.cakes-category .menu-card h3 {
+    font-size: 22px;
+    color: #3e2723;
+    margin-bottom: 12px;
+}
+
+
+/* CAKE DESCRIPTION */
+
+.cakes-category .menu-card p {
+    color: #795548;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    min-height: 0;
+}
+
+
+/* CAKE PRICE */
+
+.cakes-category .menu-card .price {
+    color: #a66b3f;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+
+/* CAKE BUTTON */
+
+.cakes-category .menu-card button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #5a3823;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cakes-category .menu-card button:hover {
+    background: #b68a56;
+    color: white;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    padding: 80px 15%;
+    text-align: center;
+    background-color: #ead7c3;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.about p {
+    font-size: 17px;
+    line-height: 2;
+    color: #5d4037;
+}
+
+
+/* =========================
+   ABOUT IMAGE SECTION
+========================= */
+
+.about-section {
+    position: relative;
+    min-height: 500px;
+    background-image: url("image/Mocha.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+
+.about-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(25, 15, 10, 0.75);
+}
+
+.about-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    color: #fff8ed;
+}
+
+.about-content h2 {
+    font-size: 48px;
+    margin: 20px 0;
+    color: #f5d6a3;
+}
+
+.about-content p {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    color: #f4eee6;
+}
+
+.about-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 30px;
+    background: #c69a63;
+    color: #21160e;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background: #f1d2a0;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact {
+    padding: 75px 20px;
+    text-align: center;
+    background-color: #fff8ed;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: #795548;
+    margin: 15px 0;
+    font-size: 17px;
+}
+
+.contact-section {
+    position: relative;
+    background-image: url("image/caramel.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 90px 30px;
+    color: white;
+}
+
+.contact-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 12, 8, 0.85);
+}
+
+.contact-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.contact-info h2 {
+    font-size: 42px;
+    color: #f1d2a0;
+    margin: 20px 0;
+}
+
+.contact-info > p {
+    line-height: 1.8;
+    color: #eee2d2;
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.contact-item > span {
+    width: 48px;
+    height: 48px;
+    background: #c69a63;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.contact-item h3 {
+    color: #f1d2a0;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #eee2d2;
+}
+
+
+/* CONTACT FORM */
+
+.contact-form {
+    background: rgba(255, 248, 238, 0.96);
+    padding: 35px;
+    border-radius: 18px;
+    color: #3b2618;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    color: #5a3823;
+    margin-bottom: 25px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #d7c3ac;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #a47745;
+    box-shadow: 0 0 5px rgba(166, 119, 65, 0.2);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #5a3823;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #a47745;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #2b1d18;
+    color: #f3d5a5;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .menu-container,
+    .cakes-category .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        padding: 50px 5%;
+        gap: 30px;
+    }
+
+    .hero h2 {
+        font-size: 50px;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 25px;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 350px;
+        height: 320px;
+    }
+
+    .menu {
+        padding: 60px 20px;
+    }
+
+    .menu h2 {
+        font-size: 32px;
+    }
+
+    .menu-container,
+    .cakes-category .menu-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card img,
+    .cakes-category .menu-card img {
+        height: 230px;
+    }
+
+    .about {
+        padding: 55px 25px;
+    }
+
+    .about h2 {
+        font-size: 32px;
+    }
+
+    .about-content h2 {
+        font-size: 34px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+    }
+
+    .contact h2 {
+        font-size: 32px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .contact-info h2 {
+        font-size: 32px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .contact-section {
+        padding: 60px 20px;
+    }
+}
+/* =========================
+   COFFEE BUTTONS
+========================= */
+
+.card button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #5a3823;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #b68a56;
+    color: white;
+}
+/* =========================
+   COLD DRINKS SECTION
+========================= */
+.shake-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: top center; /* Image ka top / upper part priority par rakhta hai */
+  border-radius: 12px;
+}
+
+.cold-drinks-category > h2 {
+    font-size: 30px;
+    color: #5a3823;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #d8bd99;
+}
+
+
+/* COLD DRINKS GRID */
+
+.cold-drinks-category .menu-grid {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+
+/* COLD DRINK CARDS */
+
+.cold-drinks-category .menu-card {
+    width: 100%;
+    min-width: 0;
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(62, 39, 35, 0.09);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cold-drinks-category .menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(62, 39, 35, 0.16);
+}
+
+
+/* DRINK IMAGES */
+
+.cold-drinks-category .menu-card img {
+    width: 100%;
+    height: 230px;
+    min-height: 230px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+
+/* DRINK HEADING */
+
+.cold-drinks-category .menu-card h3 {
+    font-size: 22px;
+    color: #3e2723;
+    margin-bottom: 12px;
+}
+
+
+/* DRINK DESCRIPTION */
+
+.cold-drinks-category .menu-card p {
+    color: #795548;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+/* DRINK PRICE */
+
+.cold-drinks-category .menu-card .price {
+    color: #a66b3f;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+
+/* DRINK BUTTONS */
+
+.cold-drinks-category .menu-card button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #5a3823;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    object-position: top;
+}
+
+.cold-drinks-category .menu-card button:hover {
+    background: #b68a56;
+    color: white;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 00px) {
+    .cold-drinks-category .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 750px) {
+    .cold-drinks-category .menu-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
+/* Welcome Popup */
+.welcome-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.welcome-box {
+    background: #ffe082;
+    padding: 35px;
+    width: 350px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-box h2 {
+    color: #4e342e;
+}
+
+.welcome-box p {
+    color: #5d4037;
+}
+
+.welcome-box button {
+    background: #6d4c41;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.welcome-box button:hover {
+    background: #4e342e;
+}

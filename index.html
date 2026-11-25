@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nissan Cafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <h1>☕ Nissan Café</h1>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- HOME SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <p class="subtitle">WELCOME TO Nissan CAFÉ</p>
+
+            <h2>A little warmth<br>in every cup.</h2>
+
+            <p>
+                Discover the rich taste of freshly brewed coffee,
+                delicious desserts, and beautiful moments.
+            </p>
+
+            <a href="#menu" class="btn">Explore Our Menu</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="image/Mocha.jpg" alt="Freshly brewed Mocha">
+        </div>
+
+    </section>
+
+
+    <!-- MENU SECTION -->
+    <section class="menu" id="menu">
+
+        <h2>Our Special Menu</h2>
+
+        <p class="menu-text">
+            Made with love, served with warmth.
+        </p>
+
+
+        <!-- COFFEE CARDS -->
+        <div class="menu-container">
+
+            <div class="card">
+                <img src="image/Espresso.jpg" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Rich and bold coffee with a perfect aroma.</p>
+                <span>Rs. 350</span>
+
+                <button onclick="addToCart('Espresso',350)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Espresso',350)">Order Now</button>
+            </div>
+
+
+            <div class="card">
+                <img src="image/cappuccino.jpg" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Espresso topped with creamy milk foam.</p>
+                <span>Rs. 450</span>
+
+                <button onclick="addToCart('Cappuccino',450)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Cappuccino',450)">Order Now</button>
+            </div>
+
+
+            <div class="card">
+                <img src="image/caramel.jpg" alt="Cafe Latte">
+                <h3>Café Latte</h3>
+                <p>Smooth coffee blended with steamed milk.</p>
+                <span>Rs. 480</span>
+
+                <button onclick="addToCart('Cafe Latte',480)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Cafe Latte',480)">Order Now</button>
+            </div>
+
+
+            <div class="card">
+                <img src="image/Hot-Chocolate.jpg" alt="Mocha">
+                <h3>Hot-Chocolate</h3>
+                <p>Warm chocolate with a creamy and comforting taste.</p>
+                <span>Rs. 400</span>
+
+                <button onclick="addToCart('Hot-Chocolate',400)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Hot-Chocolate',400)">Order Now</button>
+            </div>
+
+
+            <div class="card">
+                <img src="image/iced.jpg" alt="Iced Coffee">
+                <h3>Iced Coffee</h3>
+                <p>Refreshing cold coffee for coffee lovers.</p>
+                <span>Rs. 400</span>
+
+                <button onclick="addToCart('Iced Coffee',400)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Iced Coffee',400)">Order Now</button>
+            </div>
+
+
+            <div class="card">
+                <img src="image/cofee.jpg" alt="Caramel Macchiato">
+                <h3>Caramel Macchiato</h3>
+                <p>Coffee with milk and sweet caramel flavor.</p>
+                <span>Rs. 550</span>
+
+                <button onclick="addToCart('Caramel Macchiato',550)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Caramel Macchiato',550)">Order Now</button>
+            </div>
+
+
+            <div class="card">
+                <img src="image/cappuccino.jpg" alt="Flat White">
+                <h3>Flat White</h3>
+                <p>Velvety milk blended with rich espresso.</p>
+                <span>Rs. 520</span>
+
+                <button onclick="addToCart('Flat White',520)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Flat White',520)">Order Now</button>
+            </div>
+
+
+            <div class="card">
+                <img src="image/Mocha.jpg" alt="Hot Chocolate">
+                <h3>Mocha</h3>
+                <p>A delicious combination of coffee and chocolate.</p>
+                <span>Rs. 420</span>
+
+                <button onclick="addToCart('Mocha',420)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Hot Chocolate',420)">Order Now</button>
+            </div>
+
+
+            <div class="card">
+                <img src="image/caramel.jpg" alt="Caramel Latte">
+                <h3>Caramel Latte</h3>
+                <p>Sweet caramel combined with smooth coffee and milk.</p>
+                <span>Rs. 530</span>
+
+                <button onclick="addToCart('Caramel Latte',530)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Caramel Latte',530)">Order Now</button>
+            </div>
+
+
+            <div class="card">
+                <img src="image/caramel2.jpg" alt="Caramel Latte">
+                <h3>Caramel Latte</h3>
+                <p>Sweet caramel combined with smooth coffee and milk.</p>
+                <span>Rs. 530</span>
+
+                <button onclick="addToCart('Caramel Latte',530)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Caramel Latte',530)">Order Now</button>
+            </div>
+
+
+            <div class="card">
+                <img src="image/iced.jpg" alt="Cold Brew">
+                <h3>Cold Brew</h3>
+                <p>Slow-brewed coffee served chilled and refreshing.</p>
+                <span>Rs. 450</span>
+
+                <button onclick="addToCart('Cold Brew',450)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Cold Brew',450)">Order Now</button>
+            </div>
+
+
+            <div class="card">
+                <img src="image/iced2.jpg" alt="Cold Brew">
+                <h3>Cold Brew</h3>
+                <p>Slow-brewed coffee served chilled and refreshing.</p>
+                <span>Rs. 460</span>
+
+                <button onclick="addToCart('Cold Brew',460)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Cold Brew',460)">Order Now</button>
+            </div>
+
+
+            <div class="card">
+                <img src="image/Espresso.jpg" alt="Americano">
+                <h3>Americano</h3>
+                <p>Espresso softened with hot water for a smooth taste.</p>
+                <span>Rs. 380</span>
+
+                <button onclick="addToCart('Americano',380)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Americano',380)">Order Now</button>
+            </div>
+
+
+            <div class="card">
+                <img src="image/latte1.jpg" alt="Caramel Latte">
+                <h3>Caramel Latte</h3>
+                <p>Sweet caramel combined with smooth coffee and milk.</p>
+                <span>Rs. 530</span>
+
+                <button onclick="addToCart('Caramel Latte',530)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Caramel Latte',530)">Order Now</button>
+            </div>
+               <div class="card">
+                <img src="image/Turkish_coffe.jpg" alt="Turkish_coffe">
+                <h3>Turkish_coffe</h3>
+                <p>Sweet & smooth  Turkish coffee.</p>
+                <span>Rs. 300</span>
+
+                <button onclick="addToCart('Turkish_coffe',300)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Turkish_coffe',300)">Order Now</button>
+            </div>
+
+        
+
+        </div>
+        <!-- COFFEE GRID END -->
+
+
+        <!-- CAKES SECTION -->
+        <div class="menu-category cakes-category">
+
+            <h2>🍰 Cakes & Sweet Treats</h2>
+
+            <div class="menu-grid">
+            <div class="card">
+                <img src="image/Turkish_milk_cake.jpg" alt="Turkish_milk_cake">
+                <h3>Turkish_milk_cake</h3>
+                <p>Sweet & smooth  and delicious Turkish_milk_cake.</p>
+                <span>Rs. 700</span>
+
+                <button onclick="addToCart('Turkish_milk_cake',700)">Add to Cart</button>
+                <button class="order-btn" onclick="orderNow('Turkish_coffe',700)">Order Now</button>
+            </div>
+
+
+                <div class="menu-card">
+                    <img src="image/brownie.jpg" alt="Chocolate Brownie">
+                    <h3>Chocolate Brownie</h3>
+                    <p>Rich, soft and fudgy chocolate brownie.</p>
+                    <span class="price">Rs. 350</span>
+
+                    <button onclick="addToCart('Chocolate Brownie',350)">Add to Cart</button>
+                    <button class="order-btn" onclick="orderNow('Chocolate Brownie',350)">Order Now</button>
+                </div>
+
+
+                <div class="menu-card">
+                    <img src="image/chocolate-cake.jpg" alt="Chocolate Cake">
+                    <h3>Chocolate Cake</h3>
+                    <p>Delicious chocolate cake with creamy layers.</p>
+                    <span class="price">Rs. 550</span>
+
+                    <button onclick="addToCart('Chocolate Cake',550)">Add to Cart</button>
+                    <button class="order-btn" onclick="orderNow('Chocolate Cake',550)">Order Now</button>
+                </div>
+
+
+                <div class="menu-card">
+                    <img src="image/red-velvet.jpg" alt="Red Velvet Cake">
+                    <h3>Red Velvet Cake</h3>
+                    <p>Soft red velvet cake with cream frosting.</p>
+                    <span class="price">Rs. 600</span>
+
+                    <button onclick="addToCart('Red Velvet Cake',600)">Add to Cart</button>
+                    <button class="order-btn" onclick="orderNow('Red Velvet Cake',600)">Order Now</button>
+                </div>
+
+
+                <div class="menu-card">
+                    <img src="image/cheesecake.jpg" alt="Cheesecake">
+                    <h3>Cheesecake</h3>
+                    <p>Smooth and creamy cheesecake with a buttery base.</p>
+                    <span class="price">Rs. 600</span>
+
+                    <button onclick="addToCart('Cheesecake',600)">Add to Cart</button>
+                    <button class="order-btn" onclick="orderNow('Cheesecake',600)">Order Now</button>
+                </div>
+
+
+                <div class="menu-card">
+                    <img src="image/Banana Bread.jpg" alt="Banana Bread">
+                    <h3>Banana Bread</h3>
+                    <p>Rich, soft and freshly baked banana bread.</p>
+                    <span class="price">Rs. 630</span>
+
+                    <button onclick="addToCart('Banana Bread',630)">Add to Cart</button>
+                    <button class="order-btn" onclick="orderNow('Banana Bread',630)">Order Now</button>
+                </div>
+
+
+            </div>
+            <!-- CAKE GRID END -->
+
+        </div>
+        <!-- CAKES SECTION END -->
+<!-- COLD DRINKS SECTION -->
+
+<div class="menu-category cold-drinks-category">
+
+    <h2>🥤 Cold Drinks & Refreshments</h2>
+
+    <div class="menu-grid">
+
+        <!-- Strawberry Milkshake -->
+        <div class="menu-card">
+            <img src="image/Strawberry-Milkshake.jpg" alt="Strawberry_Milkshake">
+            <h3>Strawberry_Milkshakeshake</h3>
+            <p>Fresh strawberries blended with creamy chilled milk.</p>
+            <span class="price">Rs. 450</span>
+
+            <button onclick="addToCart('Strawberry_Milkshake',450)">
+                Add to Cart
+            </button>
+            <button class="order-btn" onclick="orderNow('Strawberry_Milkshake',450)">
+                Order Now
+            </button>
+        </div>
+
+
+        <!-- Chocolate Milkshake -->
+        <div class="menu-card">
+            <img src="image/Chocolate.Milkshake.jpg" alt="Chocolate.Milkshake">
+            <h3>Chocolate.Milkshake</h3>
+            <p>Rich chocolate blended into a delicious creamy shake.</p>
+            <span class="price">Rs. 500</span>
+
+            <button onclick="addToCart('Chocolate.Milkshake',500)">
+                Add to Cart
+            </button>
+
+            <button class="order-btn" onclick="orderNow('Chocolate.Milkshake',500)">
+                Order Now
+            </button>
+        </div>
+
+
+        <!-- Vanilla Milkshake -->
+        <div class="menu-card">
+            <img src="image/vanilla-shake.jpg" alt="Vanilla Milkshake">
+            <h3>Vanilla Milkshake</h3>
+            <p>Smooth vanilla flavor blended with chilled milk.</p>
+            <span class="price">Rs. 450</span>
+
+            <button onclick="addToCart('Vanilla Milkshake',450)">
+                Add to Cart
+            </button>
+
+            <button class="order-btn" onclick="orderNow('Vanilla Milkshake',450)">
+                Order Now
+            </button>
+        </div>
+
+
+        <!-- Oreo Shake -->
+        <div class="menu-card">
+            <img src="image/oreo-shake.jpg" alt="Oreo Shake">
+            <h3>Oreo Shake</h3>
+            <p>Chocolate cookies blended with creamy milk and ice cream.</p>
+            <span class="price">Rs. 550</span>
+
+            <button onclick="addToCart('Oreo Shake',550)">
+                Add to Cart
+            </button>
+
+            <button class="order-btn" onclick="orderNow('Oreo Shake',550)">
+                Order Now
+            </button>
+        </div>
+
+
+        <!-- Lemonade -->
+        <div class="menu-card">
+            <img src="image/lemonade.jpg" alt="Fresh Lemonade">
+            <h3>Fresh Lemonade</h3>
+            <p>Refreshing lemons mixed with chilled water and sweetness.</p>
+            <span class="price">Rs. 300</span>
+
+            <button onclick="addToCart('Fresh Lemonade',300)">
+                Add to Cart
+            </button>
+
+            <button class="order-btn" onclick="orderNow('Fresh Lemonade',300)">
+                Order Now
+            </button>
+        </div>
+
+
+        <!-- Fresh Orange Juice -->
+        <div class="menu-card">
+            <img src="image/orange-juice.jpg" alt="Fresh Orange Juice">
+            <h3>Fresh Orange Juice</h3>
+            <p>Freshly squeezed oranges served chilled and refreshing.</p>
+            <span class="price">Rs. 400</span>
+
+            <button onclick="addToCart('Fresh Orange Juice',400)">
+                Add to Cart
+            </button>
+
+            <button class="order-btn" onclick="orderNow('Fresh Orange Juice',400)">
+                Order Now
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- COLD DRINKS SECTION END -->
+    </section>
+    <!-- MENU SECTION END -->
+
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+
+        <div class="about-overlay"></div>
+
+        <div class="about-content">
+
+            <span class="subtitle">OUR STORY</span>
+
+            <h2>Welcome to Nisan Café</h2>
+
+            <p>
+    Nissan Café is a place where delicious flavors meet comfort.
+    From freshly brewed coffee to mouthwatering cakes,
+    refreshing juices, and creamy milkshakes, we have something
+    special for everyone.
+</p>
+
+<p>
+    Whether you are craving a sweet treat, a refreshing drink,
+    or a warm cup of coffee, we bring you delicious flavors,
+    happiness, and a peaceful atmosphere to make every visit memorable.
+</p>
+            <a href="#menu" class="about-btn">Explore Our Menu</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+
+        <div class="contact-overlay"></div>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <span class="subtitle">GET IN TOUCH</span>
+
+                <h2>Let's Have a Coffee</h2>
+
+                <p>
+                    Have a question, a suggestion, or simply want to say hello?
+                    We would love to hear from you.
+                </p>
+
+                <div class="contact-details">
+
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>Islamabad, Pakistan</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>0300-1234567</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <div>
+                            <h3>Email</h3>
+                            <p>hello@nisancafe.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span>🕒</span>
+                        <div>
+                            <h3>Opening Hours</h3>
+                            <p>Daily — 9:00 AM to 11:00 PM</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+            <div class="contact-form">
+
+                <h2>Send Us a Message</h2>
+
+                <form>
+
+                    <input type="text" placeholder="Your Name" required>
+
+                    <input type="email" placeholder="Your Email" required>
+
+                    <input type="text" placeholder="Subject">
+
+                    <textarea placeholder="Write your message..." rows="5" required></textarea>
+
+                    <button type="submit">Send Message</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2027 Nissan Café | Made with love and coffee ☕</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+    <div id="welcomePopup" class="welcome-popup">
+    <div class="welcome-box">
+        <h2>Welcome to Nissan Cafe ☕</h2>
+        <p>Enjoy your favorite coffee and delicious treats!</p>
+        <button onclick="closeWelcome()">Let's Explore</button>
+    </div>
+</div>
+
+</body>
+</html>
+```

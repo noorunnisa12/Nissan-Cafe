@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nissan Cafe - Order</title>
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+     
+
+       body {
+    background: #fce4ec;
+    font-family: Arial, sans-serif;
+    color: #3e2723;
+    padding: 30px 15px;
+}
+
+        .order-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #6c3fa0;
+        }
+
+        .product {
+            text-align: center;
+            padding: 20px;
+            background: #f7edff;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .product h2 {
+            margin: 15px 0;
+            color: #6c3fa0;
+        }
+
+        .product p {
+            color: #e84393;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+            font-family: Arial, sans-serif;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #b56ad7;
+            box-shadow: 0 0 5px rgba(181,106,215,0.2);
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .payment-section {
+            margin-top: 20px;
+        }
+
+        .payment-section h3 {
+            margin-bottom: 12px;
+            color: #6c3fa0;
+        }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #fce4f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .payment-option:hover {
+            background: #f8c9e3;
+        }
+
+        .payment-option input {
+            width: auto;
+            margin: 0;
+            accent-color: #e84393;
+        }
+
+        .confirm-btn {
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            background: #e84393;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .confirm-btn:hover {
+            background: #d63384;
+            transform: scale(1.02);
+        }
+
+        .back-btn {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #e84393;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            color: #c02672;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="order-container">
+
+        <h1>💜 Complete Your Order</h1>
+
+        <!-- PRODUCT DETAILS -->
+
+        <div class="product">
+
+            <h2 id="productName">Product Name</h2>
+
+            <p id="productPrice">Price</p>
+
+        </div>
+
+
+        <!-- CUSTOMER FORM -->
+
+        <form id="orderForm">
+
+            <input type="text"
+                   id="customerName"
+                   placeholder="Enter Your Full Name"
+                   required>
+
+            <input type="tel"
+                   id="phone"
+                   placeholder="Enter Your Phone Number"
+                   required>
+
+            <textarea id="address"
+                      placeholder="Enter Your Delivery Address"
+                      required></textarea>
+
+
+            <!-- PAYMENT OPTIONS -->
+
+            <div class="payment-section">
+
+                <h3>💳 Select Payment Method</h3>
+
+                <label class="payment-option">
+
+                    <input type="radio"
+                           name="payment"
+                           value="Cash on Delivery"
+                           required>
+
+                    Cash on Delivery
+
+                </label>
+
+
+                <label class="payment-option">
+
+                    <input type="radio"
+                           name="payment"
+                           value="Online Payment">
+
+                    Online Payment
+
+                </label>
+
+            </div>
+
+
+            <!-- CONFIRM BUTTON -->
+
+            <button type="submit" class="confirm-btn">
+                Confirm Order
+            </button>
+
+        </form>
+
+
+        <a href="index.html" class="back-btn">
+            ← Back to Menu
+        </a>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const product = JSON.parse(localStorage.getItem("selectedProduct"));
+
+        if (product) {
+
+            document.getElementById("productName").textContent = product.name;
+
+            document.getElementById("productPrice").textContent =
+                "Rs. " + product.price;
+
+        } else {
+
+            document.getElementById("productName").textContent =
+                "No Product Selected";
+
+            document.getElementById("productPrice").textContent = "";
+
+        }
+
+
+        document.getElementById("orderForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("customerName").value;
+
+            const phone = document.getElementById("phone").value;
+
+            const address = document.getElementById("address").value;
+
+            const payment = document.querySelector('input[name="payment"]:checked').value;
+
+
+            alert(
+                "Order Submitted Successfully! 💗\n\n" +
+                "Product: " + product.name + "\n" +
+                "Price: Rs. " + product.price + "\n" +
+                "Customer: " + name + "\n" +
+                "Phone: " + phone + "\n" +
+                "Address: " + address + "\n" +
+                "Payment: " + payment
+            );
+
+        });
+
+    </script>
+
+</body>
+</html>
